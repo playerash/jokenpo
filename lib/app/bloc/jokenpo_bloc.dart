@@ -18,8 +18,6 @@ class JokenpoBloc extends Bloc<JokenpoEvent, JokenpoState> {
     Image image = Image.asset("assets/$jokenpo.png");
 
     if (event is JokenpoTesouraEvent) {
-      print("teste");
-      print(jokenpo);
       if (jokenpo == "tesoura") {
         emit(JokenpoLoadedState(image: image, message: "Empate"));
       } else if (jokenpo == "pedra") {

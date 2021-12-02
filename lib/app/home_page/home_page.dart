@@ -17,14 +17,26 @@ class HomePage extends StatelessWidget {
             builder: (context, state) {
               if (state is JokenpoInitialState) {
                 return Column(
-                  children: [state.image, Text(state.message)],
+                  children: [
+                    state.image,
+                    Text(
+                      state.message,
+                      style: const TextStyle(color: Colors.white, fontSize: 26),
+                    )
+                  ],
                 );
               } else if (state is JokenpoLoadedState) {
                 return Column(
-                  children: [state.image, Text(state.message)],
+                  children: [
+                    state.image,
+                    Text(
+                      state.message,
+                      style: const TextStyle(color: Colors.white, fontSize: 26),
+                    ),
+                  ],
                 );
               } else {
-               return const Text("Erro");
+                return const Text("Erro");
               }
             },
           ),
